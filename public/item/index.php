@@ -8,6 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+    <?php $items = find_all_items();
+        $count = mysqli_num_rows($items);
+        echo $count;
+    ?>
     <?php include(SHARED_PATH. '/nav.php') ?>
+
 </body>
 </html>
