@@ -8,11 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <?php $items = find_all_items();
-        $count = mysqli_num_rows($items);
-        echo $count;
+    <?php 
+        $id = $_GET['id'];
+        $items = find_item($id);
+        echo mysqli_num_rows($items);
     ?>
     <?php include(SHARED_PATH. '/nav.php') ?>
-
+    <h1>
+    <?php while($item = mysqli_fetch_assoc($items)){ ?>
+            <?php echo $item['name'] ?>
+        <?php } ?>
+    </h1>
 </body>
 </html>

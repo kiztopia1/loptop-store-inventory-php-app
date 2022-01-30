@@ -30,7 +30,7 @@
                 while($item = mysqli_fetch_assoc($items)){ ?>
                     <tr>
                         
-                    <td><a href=""><?php echo $item['id'] ?></a></td>
+                    <td><a href="item<?php echo '?id='.$item['id']; ?>"><?php echo $item['id'] ?></a></td>
                     <td><?php echo $item['name'] ?></td>
                     <td><?php echo $item['manufacturer'] ?></td>
                     <td><?php echo $item['ram'] ?></td>
